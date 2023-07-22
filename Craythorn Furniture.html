@@ -1,0 +1,67 @@
+
+<HTML>
+<head>
+<Title>  Craythorn Furniture  </Title>
+</Head>
+<body>
+<H1> <B> Furniture </B> </H1>
+<img src = "logo.jpg" alt = "furniture logo" height=175>
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br/>
+  <label for="add">address:</label><br/>
+  <input type="text"id="add" name= "add"><br/>
+  <label for="phone">phone:</label><br>
+  <input type="text"id="phone" name="phone"><br/>
+  <label for="Eadd">Email:</label><br>
+  <input type="text" id="Eadd" name="Eadd"><br>
+  <label for="Room">room:</label><br>
+  <input type="text" id="Room" name="Room"><br>
+  <label for="Ftype">furniture type:</label><br>
+  <input type="text" id="Ftype" name="FurnitureType"><br>
+  <label for="Length">length:</label><br>
+  <input type="number" id="Length" name="length"><br>
+  <label for="Width">width:</label><br>
+  <input type="number" id="Width" name="width"><br>
+  <label for="Height">height:</label><br>
+  <input type="number" id="Height" name="height"><br>
+  <label for="Drawers">drawers:</label><br>
+  <input type="number" id="Drawers" name="drawers"><br>
+ 
+</form>
+<p>Select desired Finish:</p>
+
+<form>
+  <input type="radio" id="Walnut" name="finish" value="Walnut">
+  <label for="Walnut">walnut</label><br>
+  <input type="radio" id="Cherry" name="finish" value="Cherry">
+  <label for="Cherry">cherry</label><br>
+  <input type="radio" id="Weathered grey" name="finish" value="weathered grey">
+  <label for="weathered grey">weathered grey</label>
+</form>
+<form>
+
+<form>
+ <input type="submit" value="Submit"><br/>
+<br/>
+<button name = "Calculate" type ="button" onclick = "calculatePrice()">Calculate</button><br/>
+<label for="Price">price:</label>
+<output id = "ANS" for "Price"></output>
+
+<script>
+function calculatePrice()
+{ 
+var L = parseFloat(document.getElementById('Length').value);
+var W = parseFloat(document.getElementById('Width').value);
+var H = parseFloat(document.getElementById('Height').value);
+var D = parseFloat(document.getElementById('Drawers').value);
+var P = 2*(L*W + L*H + W*H)+ 2*D;
+document.getElementById('ANS').innerHTML = P;
+}
+</script>
+
+</form>
+</body>
+</HTML>
