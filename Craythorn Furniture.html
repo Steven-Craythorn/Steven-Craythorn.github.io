@@ -70,14 +70,13 @@ var H = parseFloat(document.getElementById('Height').value);
 var D = parseFloat(document.getElementById('Drawers').value);
 var P = 2*((L*W) + (L*H) + (W*H) )+ (2*D);
 var T = "";
-var S = P - T;
   if (P >= 35 && P < 50 ){
   T = P*0.15}
   else if (P > 50) {
     T = P*0.25 }
   else{
    T = 0 };
-  
+  var S = P - T;
       
 document.getElementById('ANS').innerHTML = P;
 document.getElementById('DIS').innerHTML = T;
