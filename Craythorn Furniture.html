@@ -56,6 +56,8 @@ body {background-color: AntiqueWhite;}
 <button name = "Calculate" type ="button" onclick = "calculatePrice()">Calculate</button><br/>
 <label for="Price">price:</label>
 <output id = "ANS" for "Price"></output>
+<label for="Discount">discount amount:</label>
+<output id = "DIS" for "Discount"></output>
 
 <script>
 function calculatePrice()
@@ -76,6 +78,7 @@ var S = P - T;
   
       
 document.getElementById('ANS').innerHTML = S;
+document.getElementById('DIS').innerHTML = T;
 }
 </script>
 <nav>
