@@ -52,7 +52,11 @@ body {background-color: AntiqueWhite;}
 <button name = "Calculate" type ="button" onclick = "calculatePrice()">Calculate</button><br/>
 <label for="Price">price:</label>
 <output id = "ANS" for "Price"></output>
-
+<p>
+  As you look into the refinishing of your furniture we at craythorn furniture refinishing would like to remind you that the price is two dollars a square foot and two dollars per drawer.
+  we would also like to remind you that there are multiple ways to receive a discount. your first is spending more than 35 dollars at which point you will see a 15 percent discount. 
+  the second is if you spend more than 50 dollars you would receive a 25 percent discount. 
+</p>
 <script>
 function calculatePrice()
 { 
@@ -61,7 +65,17 @@ var W = parseFloat(document.getElementById('Width').value);
 var H = parseFloat(document.getElementById('Height').value);
 var D = parseFloat(document.getElementById('Drawers').value);
 var P = 2*(L*W + L*H + W*H)+ 2*D;
-document.getElementById('ANS').innerHTML = P;
+var T = ""
+var S = P - T
+  if P >= 35 && P < 50 {
+  T = P*0.15}
+  else if P > 50 {
+    T = P*0.25 }
+  else{
+    S = P
+  
+      
+document.getElementById('ANS').innerHTML = S;
 }
 </script>
 <nav>
