@@ -31,6 +31,27 @@ a:active {
   text-decoration: underline;
 }
       p.outset {border-style: outset;}
+      nav {
+  float: left;
+  width: 30%;
+  background: #ccc;
+  padding: 20px;
+}
+      article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 </style>
     <Title> Refinish Furniture </Title>
   </head>
@@ -42,6 +63,7 @@ a:active {
     <H1> <B> Refinishing Furniture </B></H1>
 <img src = "painting_furniture_3.jpg" alt = "monster dresser" height = 200> <img src = " furniture.jpg" alt "dresser refinish" height = 200>
     <img src = "scrath_removal.jpg" alt = "scratch removed" height = 200>
+    <article>
   <p
     class="outset">
        On this website, we will look at refinishing furniture. we will discuss projects that have been done and the process needed to be successful. We will discuss the need for the proper 
@@ -55,11 +77,13 @@ a:active {
   to see the changes that need to be made. in some instances the changes need to be in hardware in others it needs to be reinforcing the piece and re-defining the character. Furniture pieces 
   that have been finished give the individual a sense of absolute pride. Speaking from experience the completion of a project allows the individual to have a sense of purpose and need.
     </p>
+    </article>
+    <section>
     <p>
          <img src= "bookcase1.jpg" alt = "bookshelf" height = 200> <img src= "bookshelfblack.jpg" Alt ="black bookcase" height = 200>
       <img src="dresserBeforeandAfter.jpg" Alt ="bookcase refinishing" height = 200>
     </p>
-
+</section>
     <nav>
 <table cellspacing="5" cellpadding="5">
 <tr>
