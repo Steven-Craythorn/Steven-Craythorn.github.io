@@ -33,6 +33,25 @@ a:active {
 padding-bottom: 12px;
 background-color: SlateGray;
 width: 100%;}
+    .column {
+		  float: left;
+		}
+		.column.left {
+		  margin-top: 8px;
+		  width: 25%;
+		  padding: 50px;
+		  border: 1px solid red;
+		  background-color: black;
+		}
+		.column.right {
+		  margin-top: 8px;
+		  width: auto;
+		  padding-left: 50px;
+		}
+	
+		.row:after {
+		  content: "";
+		  display: table;
     </style>
 <Title>  Craythorn Furniture  </Title>
 
@@ -40,6 +59,8 @@ width: 100%;}
     <div class="header">
 <H1> <B> Furniture </B> </H1>
     </div>
+  <div class="row">
+	<div class="column left">
 <img src = "FurnitureLogo.jpg" alt = "furniture logo" height=175>
 <form>
   <label for="fname">First name:</label><br>
@@ -91,7 +112,7 @@ width: 100%;}
 <output id = "DIS" for "Discount"></output></br>
 <label for = "Total">total:</label>
 <output id = "TOL" for "Total"></output>
-
+</div>
 <script>
 function calculatePrice()
 { 
